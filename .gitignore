@@ -1,0 +1,9 @@
+.DS_Store
+._.DS_Store
+.idea
+.idea/*
+.settings
+.settings/*
+.classpath
+.project
+.jar
