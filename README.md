@@ -1,4 +1,4 @@
-# Encryption Test Tool
+# Cryptest - Encryption Test Tool
 
 The tool is an encryption verification tool with different algorithms, modes of operation and padding schemes.
 
