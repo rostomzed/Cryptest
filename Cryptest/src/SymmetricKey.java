@@ -49,18 +49,10 @@ public class SymmetricKey {
 	 */
 	public SymmetricKey(String algorithm, int s) throws NoSuchAlgorithmException {
 		size = s;
-		//if(algorithm.equals("AES")){
-			KeyGenerator keygen = KeyGenerator.getInstance(algorithm);
-			keygen.init(s);			
-			SecretKey k = keygen.generateKey();
-			key = k.getEncoded();
-		/*}
-		else{
-			SecretKey k = KeyGenerator.getInstance(algorithm).generateKey();
-			key = k.getEncoded();
-			if(algorithm=="DESede" && s==112)
-				for(int i=0;i<8;i++) key[16+i] = key[i];
-		}*/
+		KeyGenerator keygen = KeyGenerator.getInstance(algorithm);
+		keygen.init(s);			
+		SecretKey k = keygen.generateKey();
+		key = k.getEncoded();
 	}
 	
 	/**
