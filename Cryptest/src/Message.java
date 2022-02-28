@@ -138,16 +138,4 @@ public class Message {
 		message = hexStringToByteArray(temp);
 		type = "hex";
 	}
-	/* previous code
-	public void convertToHex(){
-		String s = new String(message);
-		char[] chars = s.toCharArray();
-		StringBuffer output = new StringBuffer();
-		for(int i=0; i<chars.length; i++){
-			output.append(Integer.toHexString((int) chars[i]));
-		}
-		s = output.toString();
-		message = hexStringToByteArray(s);
-		type = "hex";
-	}*/
 }
