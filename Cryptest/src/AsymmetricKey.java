@@ -227,22 +227,18 @@ public class AsymmetricKey {
 	public void loadPrivateKey(String path, String algorithm)
 			throws IOException, NoSuchAlgorithmException,
 			InvalidKeySpecException {
-		System.out.println("-----------1-----------");
 		// Read Private Key
 		File filePrivateKey = new File(path);
 		FileInputStream fis = new FileInputStream(path);
 		byte[] encodedPrivateKey = new byte[(int) filePrivateKey.length()];
 		fis.read(encodedPrivateKey);
 		fis.close();
-		System.out.println("-----------2-----------");
  
 		// Generate private key
 		KeyFactory keyFactory = KeyFactory.getInstance(algorithm);
 		PKCS8EncodedKeySpec privateKeySpec = new PKCS8EncodedKeySpec(encodedPrivateKey);
 		PrivateKey privateKey = keyFactory.generatePrivate(privateKeySpec);
-
-		System.out.println("-----------3-----------");
 		
-        privatekey = privateKey.getEncoded();		
+        	privatekey = privateKey.getEncoded();		
 	}
 }
