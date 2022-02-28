@@ -164,7 +164,7 @@ public class Padding {
 		byte[] unpadded = null;
 		int counter = (int) plainText[plainText.length-1];
 		int b = plainText.length%blocksize;
-		if(plainText.length>0 && plainText.length>counter && b==0 && counter>0){// && plainText.length>8){
+		if(plainText.length>0 && plainText.length>counter && b==0 && counter>0){
 			unpadded = new byte[plainText.length - counter];
 			System.arraycopy(plainText, 0, unpadded, 0, plainText.length-counter);
 		}
@@ -210,7 +210,7 @@ public class Padding {
 		byte[] unpadded = null;
 		int counter = (int) plainText[plainText.length-1];
 		int b = plainText.length%blocksize;
-		if(plainText.length>0 && plainText.length>counter && b==0 && counter>0){// && plainText.length>8){
+		if(plainText.length>0 && plainText.length>counter && b==0 && counter>0){
 			unpadded = new byte[plainText.length - counter];
 			System.arraycopy(plainText, 0, unpadded, 0, plainText.length-counter);
 		}
